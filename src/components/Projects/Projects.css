@@ -1,0 +1,327 @@
+/* Enhanced Projects Section Styles */
+.projects-section {
+  position: relative;
+  padding: 60px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg, #ffffff);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.06));
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.05), rgba(255, 101, 132, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-color, #6c63ff);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.1) 10px,
+    rgba(255, 255, 255, 0.1) 20px
+  );
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+.project-content {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-color, #1a1a1a);
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+  color: var(--primary-color, #6c63ff);
+}
+
+.project-content p {
+  margin-bottom: 20px;
+  color: var(--text-color, #666);
+  line-height: 1.6;
+  flex: 1;
+  font-size: 15px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background: var(--tag-bg, rgba(108, 99, 255, 0.08));
+  color: var(--primary-color, #6c63ff);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag:hover {
+  background: var(--primary-color, #6c63ff);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-links .btn {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-links .btn-primary {
+  background: var(--primary-color, #6c63ff);
+  color: white;
+  border: 2px solid var(--primary-color, #6c63ff);
+}
+
+.project-links .btn-secondary {
+  background: transparent;
+  color: var(--primary-color, #6c63ff);
+  border: 2px solid var(--primary-color, #6c63ff);
+}
+
+.project-links .btn-secondary:hover {
+  background: var(--primary-color, #6c63ff);
+  color: white;
+}
+
+/* Loading state animation */
+.project-card.loading {
+  pointer-events: none;
+}
+
+.project-card.loading .project-image,
+.project-card.loading .project-content h3,
+.project-card.loading .project-content p {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    background: var(--card-bg, #1a1a1a);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .project-content h3 {
+    color: var(--heading-color, #ffffff);
+  }
+  
+  .project-content p {
+    color: var(--text-color, #b0b0b0);
+  }
+  
+  .tag {
+    background: rgba(108, 99, 255, 0.2);
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+}
+
+/* Enhanced responsive design */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  
+  .project-content {
+    padding: 24px;
+  }
+  
+  .project-content h3 {
+    font-size: 20px;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-links .btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    gap: 20px;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card *,
+  .tag,
+  .project-links .btn {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+/* Focus states for better accessibility */
+.project-card:focus-within {
+  outline: 2px solid var(--primary-color, #6c63ff);
+  outline-offset: 4px;
+}
+
+.project-links .btn:focus {
+  outline: 2px solid var(--primary-color, #6c63ff);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .project-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .project-card:hover {
+    transform: none;
+  }
+}

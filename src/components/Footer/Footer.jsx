@@ -1,13 +1,13 @@
 import React from 'react';
 import './Footer.css';
-
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <span>YourName</span>
+            <span>Jagrav Kapoor</span>
           </div>
           <div className="footer-links">
             <a href="#about">About</a>
@@ -16,15 +16,15 @@ const Footer = () => {
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </div>
-          <div className="footer-social">
-            <a href="#"><i className="fab fa-github"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-          </div>
+              <div className="footer-social">
+        <a href="https://github.com/JagravKapoorr"><FaGithub /></a>
+        <a href="https://www.linkedin.com/in/jagrav-kapoor-74340028a/"><FaLinkedin /></a>
+        <a href="#"><FaTwitter /></a>
+        <a href="#"><FaInstagram /></a>
+              </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} YourName. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} JagraV Kapoor. All rights reserved.</p>
         </div>
       </div>
     </footer>

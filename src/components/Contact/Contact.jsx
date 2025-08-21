@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import './Contact.css';
 
 const Contact = () => {
@@ -33,28 +35,41 @@ const Contact = () => {
       <div className="container">
         <h2>Get In Touch</h2>
         <div className="contact-content">
+          {/* Contact Info */}
           <div className="contact-info glass-card">
             <h3>Contact Information</h3>
             <p>Feel free to reach out to me for any questions or opportunities!</p>
+            
             <div className="info-item">
-              <i className="fas fa-envelope"></i>
+              <FaEnvelope className="icon" />
               <span>jagrav2kapoor@gmail.com</span>
             </div>
             <div className="info-item">
-              <i className="fas fa-phone"></i>
+              <FaPhone className="icon" />
               <span>+91 9899065652</span>
             </div>
             <div className="info-item">
-              <i className="fas fa-map-marker-alt"></i>
+              <FaMapMarkerAlt className="icon" />
               <span>Delhi, India</span>
             </div>
+
             <div className="social-links">
-              <a href="https://github.com/jagravkapoor" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-              <a href="https://linkedin.com/in/jagravkapoor" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://github.com/jagravkapoor" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com/in/jagravkapoor" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
             </div>
           </div>
+
+          {/* Contact Form */}
           <form onSubmit={handleSubmit} className="contact-form glass-card">
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
@@ -67,6 +82,7 @@ const Contact = () => {
                 required
               />
             </div>
+
             <div className="form-group">
               <label htmlFor="email">Your Email</label>
               <input
@@ -78,6 +94,7 @@ const Contact = () => {
                 required
               />
             </div>
+
             <div className="form-group">
               <label htmlFor="message">Your Message</label>
               <textarea
@@ -89,6 +106,7 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
+
             <button type="submit" className="btn">Send Message</button>
             {success && <p className="success-message">{success}</p>}
           </form>

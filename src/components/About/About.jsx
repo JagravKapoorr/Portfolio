@@ -11,21 +11,22 @@ const About = () => {
           {/* About Text */}
           <div className="about-text glass-card">
             <p>
-              I'm a passionate <strong>Full-Stack Developer</strong> with hands-on experience 
-              in building dynamic, scalable, and user-friendly applications. 
-              My core expertise lies in <strong>Python, Django, React, and SQL</strong>, 
-              and I enjoy creating end-to-end solutions that solve real-world problems.
+              I'm a dedicated <strong>Full-Stack Developer</strong> with a strong foundation in 
+              designing and building scalable, efficient, and user-centric applications. 
+              My expertise spans <strong>Python, Django, React, and SQL</strong>, enabling me to craft 
+              seamless end-to-end solutions for complex business needs.
             </p>
             <p>
-              I’ve worked on projects ranging from <em>real-time chat applications</em> 
-              and <em>e-commerce platforms</em> to <em>inventory optimization systems</em>. 
-              Alongside development, I also explore <strong>AI integrations</strong> 
-              to bring intelligent automation into applications.
+              I have experience working on diverse projects, including 
+              <em> real-time chat applications</em>, <em>e-commerce platforms</em>, 
+              and <em>inventory optimization systems</em>. I’m also deeply interested 
+              in <strong>AI-driven solutions</strong> and integrating intelligent features 
+              to enhance application performance and usability.
             </p>
             <p>
-              Outside of coding, I enjoy <strong>fitness, exploring new technologies, 
-              and preparing for my MBA journey</strong>. My blend of technical expertise 
-              and problem-solving mindset helps me deliver impactful results.
+              Beyond coding, I’m passionate about <strong>fitness, exploring new technologies, 
+              and continuous learning</strong>. With a problem-solving mindset and 
+              a results-oriented approach, I aim to deliver impactful digital experiences.
             </p>
 
             {/* Personal Details */}

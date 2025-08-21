@@ -50,15 +50,15 @@ const About = () => {
             <h3>My Highlights</h3>
             <div className="stats-grid">
               <div className="stat-item">
-                <div className="stat-number">3+</div>
+                <div className="stat-number">1+</div>
                 <div className="stat-label">Years of Coding</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">15+</div>
+                <div className="stat-number">3+</div>
                 <div className="stat-label">Projects Completed</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">5+</div>
+                <div className="stat-number">7+</div>
                 <div className="stat-label">Technologies Mastered</div>
               </div>
               <div className="stat-item">

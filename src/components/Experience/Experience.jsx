@@ -11,21 +11,22 @@ const experiences = [
       'Working at client site on contractual basis. Contributing as a developer by building automation scripts and web applications using Python, Django, and SQL, while also assisting with client-specific requirements.'
   },
   {
-    id: 2,
-    role: 'Research Intern – Face Recognition Models',
-    company: 'Independent Internship',
-    duration: '2025 (Ongoing)',
-    description: 
-      'Analyzing and comparing open-source and paid face recognition models. Evaluating accuracy across multiple use cases and preparing detailed research documentation for adoption recommendations.'
-  },
-  {
-    id: 3,
-    role: 'Academic Projects',
-    company: 'University of Delhi',
-    duration: '2022 – 2025',
-    description: 
-      'Built multiple academic and personal projects including: (1) Inventory Optimization system with Python, SQL & Power BI; (2) Real-time Chat App with Django Channels & React; (3) Event Booking App with Django & React frontend integration.'
-  }
+  id: 2,
+  role: 'Research Intern – Face Recognition Models',
+  company: 'HawkAItrack',
+  duration: 'Jan 2025 – Mar 2025',
+  description: 
+    'Analyzed and compared open-source and paid face recognition models, evaluating accuracy across multiple use cases. Explored Retrieval-Augmented Generation (RAG) pipelines and vector databases for efficient information retrieval. Prepared detailed research documentation with adoption recommendations for real-world applications.'
+}
+
+  // {
+  //   id: 3,
+  //   role: 'Academic Projects',
+  //   company: 'University of Delhi',
+  //   duration: '2022 – 2025',
+  //   description: 
+  //     'Built multiple academic and personal projects including: (1) Inventory Optimization system with Python, SQL & Power BI; (2) Real-time Chat App with Django Channels & React; (3) Event Booking App with Django & React frontend integration.'
+  // }
 ];
 
 const Experience = () => {
